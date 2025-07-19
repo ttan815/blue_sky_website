@@ -3,7 +3,7 @@
   --gold-accent: #f7c873;
   --text-dark: #2d1c0e;
   --cream-bg: #fef5e7;
-  --background-color: #f5e4cc;
+  --background-color: #ffe3ba;
   --hover-red: #c94c4c;
   --font-header: 'Merriweather', serif;
   --font-body: 'Noto Sans', sans-serif;
@@ -100,6 +100,8 @@ h1, h2, h3,h4,h5,h6{
   background-size: auto 50px; /* Adjust height as needed */
   height: 50px;
   background-color: #941b0c;
+  position: relative;
+  z-index: 100;
 }
 
 .about-us-container{
@@ -108,24 +110,42 @@ h1, h2, h3,h4,h5,h6{
   align-items: center;
   width: 100%;
   background-color: var(--background-color);
+  /* background-image: url('./assets/patterns/aboutUsBackground.png'); */
   padding: 2rem 1rem 1rem 1rem;
 }
 
 .about-us {
-  max-width: 80ch; /* readable width */
+  max-width: 80ch;
   width: 80%;
-    /* padding: 2rem 0; */
   line-height: 1.8;
+  position: relative; /* ← ADD THIS */
+  z-index: 100;
+  
 }
+
 
 .about-us h1 {
   font-size: 3rem;
   color: var(--primary-red);
   font-weight: bold;
+  z-index: 100;
 }
 
 .about-us p {
   font-size: 1.3rem;
   font-family: var(--font-body);
   font-weight: 500;
+  z-index: 100;
+}
+
+.aboutUsPatterns {
+  position: fixed;
+  top: 0; /* Missing in yours — add this */
+  right: 0;
+  width: 400px;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15;
+  z-index: 1;
+  pointer-events: none;
 }

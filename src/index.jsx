@@ -1,6 +1,12 @@
 import "./index.css";
-
+import { useNavigate } from 'react-router-dom';
+import aboutUsPattern1 from "./assets/patterns/aboutUsPattern1.png"
+import aboutUsPattern2 from "./assets/patterns/aboutUsPattern2.png"
 function Index() {
+  const navigate = useNavigate();
+  const goToMenu = () => {
+    navigate('/menu');
+  };
   return (
     <>
       <div className="nav-bar">
@@ -18,7 +24,7 @@ function Index() {
             <div className="cover-page-elements">
                 <h1 style={{fontWeight:'bold'}}>BLUE SKY</h1>
                 <h3>Mandarin, Hunan, Szechuan Cuisine</h3>
-                <button className="explore-menu-btn">Explore Our Menu</button>
+                <button onClick={goToMenu} className="explore-menu-btn">Explore Our Menu</button>
             </div>
         </div>
         <div className="pattern-tiles"></div>

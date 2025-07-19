@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { app, getMenu, db } from "./firebase"
 import MenuItem from "./menuItem.jsx"
 import React, { useEffect, useState, useMemo, useRef } from "react";
+import goldenPatternCategory from "./assets/patterns/goldenPatternCategory.png"
 
 function Menu() {
 
@@ -133,26 +134,28 @@ function Menu() {
 
     return (
         <>
-            <div className="container">
-                <div className="row">
-                    <div className='blueSkyMenuTitle col-4'>
-                        <a onClick={() => navigate('/')}>
-                            <h1 className="navBarTitle">BLUE SKY</h1>
-                        </a>
-                    </div>
-                    <div className='blueSkyMenuNavBar col-8'>
-                    </div>
 
+            <div className="nav-bar">
+                <div className="nav-bar-title">  
+                    <a onClick={()=>{navigate('/')}}>
+                        <h1>BLUE SKY</h1>
+                    </a>
+                </div>
+                <div className="nav-bar-elements">
+                    <h4>HOME</h4>
+                    <h4>FAQ</h4>
+                    <h4>REVIEWS</h4>
                 </div>
             </div>
 
-            <div className='menuTitlePhotoContainer container'>
+
+            <div className='menuTitlePhotoContainer'>
                 <p className='menuTitlePhotoText'>OUR MENU</p>
             </div>
 
 
 
-            <div className="scrollmenu container">
+            <div className="scrollmenu ">
                 <a onClick={() => scrollToSection(appetizerRef)}>APPETIZERS</a>
                 <a onClick={() => scrollToSection(soupRef)}>SOUP</a>
                 <a onClick={() => scrollToSection(houseSpecialRef)}>HOUSE SPECIAL</a>
@@ -165,16 +168,26 @@ function Menu() {
                 <a onClick={() => scrollToSection(chowMeinRiceNoodlesRef)}>CHOW MEIN / RICE NOODLES</a>
                 <a onClick={() => scrollToSection(friedRiceRef)}>FRIED RICE</a>
                 <a onClick={() => scrollToSection(lunchSpecialRef)}>LUNCH SPECIAL</a>
-                <input placeholder='Search..' type='text' onChange={(e) => setSearchItem(e.target.value)}
+                <input className="searchBar" placeholder='Search..' type='text' onChange={(e) => setSearchItem(e.target.value)}
                 ></input>
             </div>
 
-
-            <div className="container">
+            <div className="backgroundOfMenu">
+<div className="container">
                 {appetizerItems.length > 0 && (
                     <>
+                        <div className="categoryDesign">
+                        <div ref={appetizerRef} className="categoryTitle">
+                            <div className="categoryBorder">
+                            <img src={goldenPatternCategory} className="categoryIcon left" />
+                            <div className="categoryLine"></div>
+                            <h3 className="categoryText">APPETIZER</h3>
+                            <div className="categoryLine"></div>
+                            <img src={goldenPatternCategory} className="categoryIcon right" />
+                            </div>
+                        </div>
+                        </div>
 
-                        <div ref={appetizerRef} className="categoryTitle">APPETIZERS</div>
                         <div className="categoryOfFoodContainer">
                             {appetizerItems.map((item, index) => (
                                 <MenuItem
@@ -193,7 +206,17 @@ function Menu() {
             <div className="container">
                 {soupItems.length > 0 && (
                     <>
-                        <div ref={soupRef} className="categoryTitle">SOUPS</div>
+                        <div className="categoryDesign">
+                        <div ref={soupRef} className="categoryTitle">
+                            <div className="categoryBorder">
+                            <img src={goldenPatternCategory} className="categoryIcon left" />
+                            <div className="categoryLine"></div>
+                            <h3 className="categoryText">SOUP</h3>
+                            <div className="categoryLine"></div>
+                            <img src={goldenPatternCategory} className="categoryIcon right" />
+                            </div>
+                        </div>
+                        </div>
                         <div className="categoryOfFoodContainer">
                             {soupItems.map((item, index) => (
                                 <MenuItem
@@ -212,7 +235,17 @@ function Menu() {
             <div className="container">
                 {houseSpecialItems.length > 0 && (
                     <>
-                        <div ref={houseSpecialRef} className="categoryTitle">HOUSE SPECIAL</div>
+                        <div className="categoryDesign">
+                        <div ref={houseSpecialRef} className="categoryTitle">
+                            <div className="categoryBorder">
+                            <img src={goldenPatternCategory} className="categoryIcon left" />
+                            <div className="categoryLine"></div>
+                            <h3 className="categoryText">HOUSE SPECIAL</h3>
+                            <div className="categoryLine"></div>
+                            <img src={goldenPatternCategory} className="categoryIcon right" />
+                            </div>
+                        </div>
+                        </div>
                         <div className="categoryOfFoodContainer">
                             {houseSpecialItems.map((item, index) => (
                                 <MenuItem
@@ -231,7 +264,17 @@ function Menu() {
             <div className="container">
                 {sizzlingItems.length > 0 && (
                     <>
-                        <div ref={sizzlingRef} className="categoryTitle">SIZZLING</div>
+                        <div className="categoryDesign">
+                        <div ref={sizzlingRef} className="categoryTitle">
+                            <div className="categoryBorder">
+                            <img src={goldenPatternCategory} className="categoryIcon left" />
+                            <div className="categoryLine"></div>
+                            <h3 className="categoryText">SIZZLING</h3>
+                            <div className="categoryLine"></div>
+                            <img src={goldenPatternCategory} className="categoryIcon right" />
+                            </div>
+                        </div>
+                        </div>
                         <div className="categoryOfFoodContainer">
                             {sizzlingItems.map((item, index) => (
                                 <MenuItem
@@ -250,7 +293,17 @@ function Menu() {
             <div className="container">
                 {poultryItems.length > 0 && (
                     <>
-                        <div ref={poultryRef} className="categoryTitle">POULTRY</div>
+                        <div className="categoryDesign">
+                        <div ref={poultryRef} className="categoryTitle">
+                            <div className="categoryBorder">
+                            <img src={goldenPatternCategory} className="categoryIcon left" />
+                            <div className="categoryLine"></div>
+                            <h3 className="categoryText">POULTRY</h3>
+                            <div className="categoryLine"></div>
+                            <img src={goldenPatternCategory} className="categoryIcon right" />
+                            </div>
+                        </div>
+                        </div>
                         <div className="categoryOfFoodContainer">
                             {poultryItems.map((item, index) => (
                                 <MenuItem
@@ -269,7 +322,17 @@ function Menu() {
             <div className="container">
                 {porkItems.length > 0 && (
                     <>
-                        <div ref={porkRef} className="categoryTitle">PORK</div>
+                        <div className="categoryDesign">
+                        <div ref={porkRef} className="categoryTitle">
+                            <div className="categoryBorder">
+                            <img src={goldenPatternCategory} className="categoryIcon left" />
+                            <div className="categoryLine"></div>
+                            <h3 className="categoryText">PORK</h3>
+                            <div className="categoryLine"></div>
+                            <img src={goldenPatternCategory} className="categoryIcon right" />
+                            </div>
+                        </div>
+                        </div>
                         <div className="categoryOfFoodContainer">
                             {porkItems.map((item, index) => (
                                 <MenuItem
@@ -288,7 +351,17 @@ function Menu() {
             <div className="container">
                 {beefItems.length > 0 && (
                     <>
-                        <div ref={beefRef} className="categoryTitle">BEEF</div>
+                        <div className="categoryDesign">
+                        <div ref={beefRef} className="categoryTitle">
+                            <div className="categoryBorder">
+                            <img src={goldenPatternCategory} className="categoryIcon left" />
+                            <div className="categoryLine"></div>
+                            <h3 className="categoryText">BEEF</h3>
+                            <div className="categoryLine"></div>
+                            <img src={goldenPatternCategory} className="categoryIcon right" />
+                            </div>
+                        </div>
+                        </div>
                         <div className="categoryOfFoodContainer">
                             {beefItems.map((item, index) => (
                                 <MenuItem
@@ -307,7 +380,17 @@ function Menu() {
             <div className="container">
                 {seafoodItems.length > 0 && (
                     <>
-                        <div ref={seafoodRef} className="categoryTitle">SEAFOOD</div>
+                        <div className="categoryDesign">
+                        <div ref={seafoodRef} className="categoryTitle">
+                            <div className="categoryBorder">
+                            <img src={goldenPatternCategory} className="categoryIcon left" />
+                            <div className="categoryLine"></div>
+                            <h3 className="categoryText">SEAFOOD</h3>
+                            <div className="categoryLine"></div>
+                            <img src={goldenPatternCategory} className="categoryIcon right" />
+                            </div>
+                        </div>
+                        </div>
                         <div className="categoryOfFoodContainer">
                             {seafoodItems.map((item, index) => (
                                 <MenuItem
@@ -326,7 +409,17 @@ function Menu() {
             <div className="container">
                 {vegetableTofuItems.length > 0 && (
                     <>
-                        <div ref={vegetableTofuRef} className="categoryTitle">VEGETABLE / TOFU</div>
+                        <div className="categoryDesign">
+                        <div ref={vegetableTofuRef} className="categoryTitle">
+                            <div className="categoryBorder">
+                            <img src={goldenPatternCategory} className="categoryIcon left" />
+                            <div className="categoryLine"></div>
+                            <h3 className="categoryText">VEGETABLE / TOFU</h3>
+                            <div className="categoryLine"></div>
+                            <img src={goldenPatternCategory} className="categoryIcon right" />
+                            </div>
+                        </div>
+                        </div>
                         <div className="categoryOfFoodContainer">
                             {vegetableTofuItems.map((item, index) => (
                                 <MenuItem
@@ -345,7 +438,17 @@ function Menu() {
             <div className="container">
                 {chowMeinRiceNoodlesItems.length > 0 && (
                     <>
-                        <div ref={chowMeinRiceNoodlesRef} className="categoryTitle">CHOW MEIN / RICE NOODLES</div>
+                        <div className="categoryDesign">
+                        <div ref={chowMeinRiceNoodlesRef} className="categoryTitle">
+                            <div className="categoryBorder">
+                            <img src={goldenPatternCategory} className="categoryIcon left" />
+                            <div className="categoryLine"></div>
+                            <h3 className="categoryText">CHOW MEIN / RICE NOODLES</h3>
+                            <div className="categoryLine"></div>
+                            <img src={goldenPatternCategory} className="categoryIcon right" />
+                            </div>
+                        </div>
+                        </div>
                         <div className="categoryOfFoodContainer">
                             {chowMeinRiceNoodlesItems.map((item, index) => (
                                 <MenuItem
@@ -364,7 +467,17 @@ function Menu() {
             <div className="container">
                 {friedRiceItems.length > 0 && (
                     <>
-                        <div ref={friedRiceRef} className="categoryTitle">FRIED RICE</div>
+                        <div className="categoryDesign">
+                        <div ref={friedRiceRef} className="categoryTitle">
+                            <div className="categoryBorder">
+                            <img src={goldenPatternCategory} className="categoryIcon left" />
+                            <div className="categoryLine"></div>
+                            <h3 className="categoryText">FRIED RICE</h3>
+                            <div className="categoryLine"></div>
+                            <img src={goldenPatternCategory} className="categoryIcon right" />
+                            </div>
+                        </div>
+                        </div>
                         <div className="categoryOfFoodContainer">
                             {friedRiceItems.map((item, index) => (
                                 <MenuItem
@@ -383,7 +496,17 @@ function Menu() {
             <div className="container">
                 {lunchSpecialItems.length > 0 && (
                     <>
-                        <div ref={lunchSpecialRef} className="categoryTitle">LUNCH SPECIAL</div>
+                        <div className="categoryDesign">
+                        <div ref={lunchSpecialRef} className="categoryTitle">
+                            <div className="categoryBorder">
+                            <img src={goldenPatternCategory} className="categoryIcon left" />
+                            <div className="categoryLine"></div>
+                            <h3 className="categoryText">LUNCH SPECIAL</h3>
+                            <div className="categoryLine"></div>
+                            <img src={goldenPatternCategory} className="categoryIcon right" />
+                            </div>
+                        </div>
+                        </div>
                         <div className="categoryOfFoodContainer">
                             {lunchSpecialItems.map((item, index) => (
                                 <MenuItem
@@ -399,6 +522,9 @@ function Menu() {
                     </>
                 )}
             </div>
+            </div>
+                    <div className="pattern-tiles"></div>
+
         </>
     )
 }
