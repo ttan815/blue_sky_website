@@ -1,0 +1,9 @@
+.appContainer {
+  max-width: 2560px;
+  margin: 0 auto;
+}
+
+* {
+  font-family: "Noto Sans", sans-serif;
+
+}

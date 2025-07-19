@@ -1,0 +1,239 @@
+.blueSkyMenuTitle {
+    margin: 0px;
+}
+
+.navBarContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.blueSkyMenuNavBar {
+    display: flex;
+    padding: 0px;
+    justify-content: flex-end;
+    font-weight: 500;
+    align-items: center;
+    cursor: pointer;
+}
+
+.blueSkyMenuNavBar p {
+    font-size: 1.2rem;
+    padding-left: 25px;
+    margin: auto;
+
+}
+
+.menuTitlePhotoContainer {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    /* background-image: url('./assets/menubackground.png'); */
+    background-color: #4ED7F1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.menuTitlePhotoText {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+    width: 100%;
+    padding: 100px;
+    font-size: 2.6rem;
+    color: white;
+    text-align: start;
+    font-weight: bold;
+}
+
+.searchMenuContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.searchMenuContainer input {
+    margin: 25px;
+    width: 200px;
+    height: 45px;
+    border-radius: 5px;
+}
+
+.categoriesContainer {
+    display: flex;
+    max-width: 300px;
+    justify-content: space-around;
+}
+
+div.scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+}
+
+div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+div.scrollmenu input {
+    padding-left: 5px;
+    margin-right: 15px;
+}
+
+div.scrollmenu a:hover {
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+.navBarTitle {
+    cursor: pointer;
+}
+
+.categoryOfFoodContainer {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    gap: 24px;
+    padding: 10px;
+}
+
+@media (max-width: 991px) {
+    .categoryOfFoodContainer {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(300px, 1fr));
+        gap: 24px;
+        padding: 10px;
+    }
+
+    .foodName,
+    .foodDescription,
+    .foodPrice {
+        margin: 0;
+        min-height: 1em;
+    }
+
+    .foodPrice {
+        font-size: .9rem !important;
+    }
+
+    .foodName {
+        margin: 0;
+        min-height: 1em;
+        font-size: .9rem !important;
+        font-weight: 600;
+    }
+
+    .foodDescription {
+        font-size: .7rem !important;
+    }
+
+    .categoryTitle {
+        font-size: 1.4rem;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+        padding: 12px 0;
+        border-radius: 8px;
+        color: black;
+
+        background: radial-gradient(circle,
+                rgba(173, 216, 230, 0.8) 0%,
+                /* Light Sky Blue center */
+                rgba(135, 206, 235, 0.6) 50%,
+                /* Soft Cerulean Blue mid-tone */
+                rgba(53, 53, 53, 0.2) 100%
+                /* Lightest Blue (Alice Blue) at edges */
+            );
+    }
+
+
+}
+
+.categoryOfFoodContainer p {
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.foodImage {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    width: 150px;
+    height: 150px;
+    padding: 0px !important;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+
+
+.foodContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+    height: 150px;
+    /* optional, can be removed depending on behavior */
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* take full width of its grid cell */
+}
+
+
+.foodContainerInfo {
+    padding: 15px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+}
+
+.foodName,
+.foodDescription,
+.foodPrice {
+    margin: 0;
+    min-height: 1em;
+}
+
+.foodName {
+    margin: 0;
+    min-height: 1em;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.foodDescription {
+    font-size: .85rem;
+}
+
+.categoryTitle {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    padding: 12px 0;
+    border-radius: 8px;
+    color: black;
+
+    background: radial-gradient(circle,
+            rgba(173, 216, 230, 0.8) 0%,
+            /* Light Sky Blue center */
+            rgba(135, 206, 235, 0.6) 50%,
+            /* Soft Cerulean Blue mid-tone */
+            rgba(141, 199, 233, 0.756) 100%
+            /* Lightest Blue (Alice Blue) at edges */
+        );
+
+
+}

@@ -1,0 +1,54 @@
+:root {
+  --primary-red: #941b0c;
+  --gold-accent: #f7c873;
+  --text-dark: #2d1c0e;
+  --cream-bg: #fef5e7;
+  --background-color: #f5e4cc;
+  --hover-red: #c94c4c;
+  --font-header: 'Merriweather', serif;
+  --font-body: 'Noto Sans', sans-serif;
+}
+
+.text-color {
+    color: var(--primary-red)
+}
+
+.nav-item a {
+    cursor: pointer;
+}
+
+footer {
+    background-color: var(--background-color);
+
+}
+
+footer p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+.footer-bottom {
+  padding-bottom: 1rem;
+  background-color: var(--background-color);
+}
+.pattern-tiles{
+  background-image: url('./assets//patterns/patternTiles.png');
+  background-repeat: repeat-x;
+  background-size: auto 50px; /* Adjust height as needed */
+  height: 50px;
+  background-color: #941b0c;
+}
+
+footer .row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+footer .col {
+  padding-left: 1rem;  /* Or adjust as needed */
+  padding-right: 1rem;
+}
+
+img{
+    width:64px;
+    height: 64px;
+}
