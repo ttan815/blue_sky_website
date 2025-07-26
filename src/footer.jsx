@@ -33,16 +33,18 @@ function Footer() {
                     <div className="col mb-2">
                         <img src={PhoneIcon}/>
                         <h5>Phone Orders</h5>
-                        <p className="text-body-secondary fw-bold mb-0">TEL: (916) - 485 - 5311</p>
+                        <a href="tel:+19164855311" className="text-body-secondary fw-bold mb-0">
+                        TEL: (916) - 485 - 5311
+                        </a>
+
                     </div>
                 </div>
                         <div className="pattern-tiles"></div>
-                        <div>
+                        <div className="copyright">
                             <p className="text-center text-body-secondary mt-3 mb-3 footer-bottom">
                             © {currentYear} Blue Sky Chinese Restaurant
                             </p>
                         </div>
-
 
             </footer>
         </div>

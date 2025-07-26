@@ -9,7 +9,7 @@ function Index() {
   };
   return (
     <>
-      <div className="nav-bar">
+      {/* <div className="nav-bar">
         <div className="nav-bar-title">  
             <h1>BLUE SKY</h1>
         </div>
@@ -19,7 +19,7 @@ function Index() {
             <h4>FAQ</h4>
             <h4>REVIEWS</h4>
         </div>
-      </div>
+      </div> */}
         <div className="cover-page">
             <div className="cover-page-elements">
                 <h1 style={{fontWeight:'bold'}}>BLUE SKY</h1>

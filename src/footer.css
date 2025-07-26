@@ -13,6 +13,11 @@
     color: var(--primary-red)
 }
 
+@media (max-width: 550px){
+  .copyright{
+  margin-bottom: 45px;
+}
+}
 .nav-item a {
     cursor: pointer;
 }

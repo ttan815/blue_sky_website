@@ -122,7 +122,7 @@ function Menu() {
     const lunchSpecialRef = useRef(null);
     const scrollToSection = (ref) => {
         if (ref.current) {
-            const yOffset = -70;
+            const yOffset = -150;
             const y = ref.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
             window.scrollTo({
@@ -134,8 +134,11 @@ function Menu() {
 
     return (
         <>
+        <div className="container-fluid">
 
-            <div className="nav-bar">
+        </div>
+
+            {/* <div className="nav-bar">
                 <div className="nav-bar-title">  
                     <a onClick={()=>{navigate('/')}}>
                         <h1>BLUE SKY</h1>
@@ -146,7 +149,7 @@ function Menu() {
                     <h4>FAQ</h4>
                     <h4>REVIEWS</h4>
                 </div>
-            </div>
+            </div> */}
 
 
             <div className='menuTitlePhotoContainer'>
@@ -165,7 +168,7 @@ function Menu() {
                 <a onClick={() => scrollToSection(beefRef)}>BEEF</a>
                 <a onClick={() => scrollToSection(seafoodRef)}>SEAFOOD</a>
                 <a onClick={() => scrollToSection(vegetableTofuRef)}>VEGETABLE / TOFU</a>
-                <a onClick={() => scrollToSection(chowMeinRiceNoodlesRef)}>CHOW MEIN / RICE NOODLES</a>
+                <a onClick={() => scroallToSection(chowMeinRiceNoodlesRef)}>CHOW MEIN / RICE NOODLES</a>
                 <a onClick={() => scrollToSection(friedRiceRef)}>FRIED RICE</a>
                 <a onClick={() => scrollToSection(lunchSpecialRef)}>LUNCH SPECIAL</a>
                 <input className="searchBar" placeholder='Search..' type='text' onChange={(e) => setSearchItem(e.target.value)}
