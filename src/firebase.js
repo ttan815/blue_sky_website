@@ -9,7 +9,7 @@ import { getDatabase } from "firebase/database";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyB5LElOc0MEYBRsa9uPk3Sla3j0ICHY7VI",
+    apiKey: "",
     authDomain: "blueskychineserestaurant.firebaseapp.com",
     projectId: "blueskychineserestaurant",
     storageBucket: "blueskychineserestaurant.firebasestorage.app",
