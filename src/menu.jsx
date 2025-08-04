@@ -16,12 +16,24 @@ function Menu() {
 
 
     useEffect(() => {
-        async function getMenuFunction() {
-            const theMenu = await getMenu(db);
-            setMenu(theMenu);
+        const cachedData = localStorage.getItem('BlueSkyMenu');
+        const cacheTimestamp = localStorage.getItem('BlueSkyMenuTimestamp');
+        const now = Date.now();
+        const cacheValidityMs = 15 * 60 * 1000; 
+
+        if (cachedData && cacheTimestamp && now - parseInt(cacheTimestamp) < cacheValidityMs) {
+            setMenu(JSON.parse(cachedData));
+        } else {
+            async function getMenuFunction() {
+                const theMenu = await getMenu(db);
+                setMenu(theMenu);
+                localStorage.setItem('BlueSkyMenu', JSON.stringify(theMenu));
+                localStorage.setItem('BlueSkyMenuTimestamp', now.toString());
+            }
+            getMenuFunction();
         }
-        getMenuFunction();
-    }, [])
+    }, []);
+
 
     const appetizerItems = useMemo(() =>
         BlueSkyMenu.filter(item =>
@@ -153,8 +165,10 @@ function Menu() {
 
 
             <div className='menuTitlePhotoContainer'>
-                <p className='menuTitlePhotoText'>OUR MENU</p>
+            <div className="menuTitlePhotoBackground" />
+            <p className='menuTitlePhotoText'>OUR MENU</p>
             </div>
+
 
 
 
@@ -168,7 +182,7 @@ function Menu() {
                 <a onClick={() => scrollToSection(beefRef)}>BEEF</a>
                 <a onClick={() => scrollToSection(seafoodRef)}>SEAFOOD</a>
                 <a onClick={() => scrollToSection(vegetableTofuRef)}>VEGETABLE / TOFU</a>
-                <a onClick={() => scroallToSection(chowMeinRiceNoodlesRef)}>CHOW MEIN / RICE NOODLES</a>
+                <a onClick={() => scrollToSection(chowMeinRiceNoodlesRef)}>CHOW MEIN / RICE NOODLES</a>
                 <a onClick={() => scrollToSection(friedRiceRef)}>FRIED RICE</a>
                 <a onClick={() => scrollToSection(lunchSpecialRef)}>LUNCH SPECIAL</a>
                 <input className="searchBar" placeholder='Search..' type='text' onChange={(e) => setSearchItem(e.target.value)}
@@ -500,7 +514,7 @@ function Menu() {
                 {lunchSpecialItems.length > 0 && (
                     <>
                         <div className="categoryDesign">
-                        <div ref={lunchSpecialRef} className="categoryTitle">
+                        <div ref={lunchSpecialRef} className="categoryTitle" style={{display:'flex', flexDirection:'column'}}>
                             <div className="categoryBorder">
                             <img src={goldenPatternCategory} className="categoryIcon left" />
                             <div className="categoryLine"></div>
@@ -508,6 +522,9 @@ function Menu() {
                             <div className="categoryLine"></div>
                             <img src={goldenPatternCategory} className="categoryIcon right" />
                             </div>
+                            <p className="categoryLunchSpecialExplanation">
+                            Available from 11:30 AM to 3:00 PM. After these hours, dinner combinations are served instead, which are slightly higher in price and do not include an appetizer.
+                            </p>
                         </div>
                         </div>
                         <div className="categoryOfFoodContainer">

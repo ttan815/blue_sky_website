@@ -9,6 +9,11 @@
   --font-body: 'Noto Sans', sans-serif;
 }
 
+.hoursInfo p{
+  padding-top: 2.5px;
+  padding-bottom: 2.5px;
+}
+
 .text-color {
     color: var(--primary-red)
 }
@@ -23,8 +28,23 @@
 }
 
 footer {
-    background-color: var(--background-color);
+    /* background-color: var(--background-color); */
+  /* background-image: url('./assets/patterns/AboutUsBackground.png'); */
+  background-repeat: no-repeat;
+  background-size: cover; /* scales the image to cover entire container */
+  background-position: center; /* centers the image */
+  /* padding: 2rem 1rem 1rem 1rem; */
+  width: 100%;
+}
 
+.footerContainer{
+     background-color: var(--background-color);
+  /* background-image: url('./assets/patterns/AboutUsBackground.png'); */
+  background-repeat: no-repeat;
+  background-size: cover; /* scales the image to cover entire container */
+  background-position: center; /* centers the image */
+  /* padding: 2rem 1rem 1rem 1rem; */
+  width: 100%; 
 }
 
 footer p {
@@ -33,6 +53,12 @@ footer p {
 }
 .footer-bottom {
   padding-bottom: 1rem;
+  /* background-color: var(--background-color); */
+}
+
+.footer-bottomOfficial {
+  /* padding-bottom: 1rem; */
+  margin: 0px;
   background-color: var(--background-color);
 }
 .pattern-tiles{

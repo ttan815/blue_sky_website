@@ -1,3 +1,16 @@
+:root {
+  --primary-red: #941b0c;
+  --gold-accent: #f7c873;
+  --text-dark: #2d1c0e;
+  --cream-bg: #fef5e7;
+  --background-color: #ffe3ba;
+  --menu-title-background-color: #7c0c04;
+  --hover-red: #c94c4c;
+  --body-background: #801404;
+  --font-header: 'Merriweather', serif;
+  --font-body: 'Noto Sans', sans-serif;
+}
+
 .foodImage {
     border-top-right-radius: 12px;
     border-bottom-right-radius: 12px;
@@ -15,13 +28,14 @@
     flex-direction: row;
     width: 100%;
     height: 150px;
-    /* optional, can be removed depending on behavior */
     box-sizing: border-box;
     background: #fff;
     border-radius: 12px;
+    background-color: var(--background-color);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    /* take full width of its grid cell */
+    background: linear-gradient(135deg, #ffe3ba, #fff0d5);
 }
+
 
 
 .foodContainerInfo {
@@ -31,6 +45,7 @@
     flex-direction: column;
     justify-content: space-between;
     height: 150px;
+
 }
 
 .foodName,
@@ -38,6 +53,8 @@
 .foodPrice {
     margin: 0;
     min-height: 1em;
+    font-family: var(--font-header) !important;
+
 }
 
 .foodName {

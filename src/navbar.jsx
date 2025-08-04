@@ -36,9 +36,6 @@ function NavBar() {
           <li className="nav-item">
             <a className="nav-link" onClick={() => navigate("/faq")}>FAQ</a>
           </li>
-          <li className="nav-item">
-            <a className="nav-link" onClick={() => navigate("/reviews")}>REVIEWS</a>
-          </li>
         </ul>
       </div>
     </nav>

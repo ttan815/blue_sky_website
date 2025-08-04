@@ -58,33 +58,30 @@ h1, h2, h3,h4,h5,h6{
 
 .cover-page {
   display: flex;
-  justify-content: center;
-  align-content: center;
+  justify-content: center;  
+  align-items: center;     
   text-align: center;
   width: 100%;
   height: 500px;
-  background-image: url('./assets/orangeChicken.jpg');
-  background-size: cover;         /* scales image to cover entire area */
-  background-position: center;    /* centers the image */
-  background-repeat: no-repeat;   /* prevents tiling */
+  background-image: url('./assets/orangeChicken.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
 .cover-page-elements {
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  align-items: center;        
   color: var(--cream-bg); 
   font-size: 4rem;
   font-family: var(--font-header);
-  display: flex;
-  justify-self: center;
-  align-self: center;
 }
-.explore-menu-btn{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
+.explore-menu-btn {
+  display: inline-block;
+  text-align: center;
   border-radius: 15px;
-  align-self: center;
   width: 200px;
   height: 50px;
   font-size: 1rem;
@@ -92,10 +89,18 @@ h1, h2, h3,h4,h5,h6{
   border: none;
   font-weight: bold;
   background-color: var(--primary-red);
+  transition: background-color 0.3s ease;
+  margin: 0 auto;
+  line-height: 50px; 
+  cursor: pointer;
+}
+
+.explore-menu-btn:hover {
+  background-color: var(--hover-red);
 }
 
 .pattern-tiles{
-  background-image: url('./assets//patterns/patternTiles.png');
+  background-image: url('./assets/patterns/patternTiles.png');
   background-repeat: repeat-x;
   background-size: auto 50px; /* Adjust height as needed */
   height: 50px;
@@ -104,15 +109,32 @@ h1, h2, h3,h4,h5,h6{
   z-index: 100;
 }
 
-.about-us-container{
+.about-us-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
+  min-height: 50vh;
   background-color: var(--background-color);
-  /* background-image: url('./assets/patterns/aboutUsBackground.png'); */
-  padding: 2rem 1rem 1rem 1rem;
+  /* background-image: url('./assets/patterns/AboutUsBackground.png'); */
+    background-image: url('./assets/patterns/backgroundAboutUs.png');
+
+  /* background-repeat: no-repeat; */
+  background-size: auto;             
+  background-position: center center; 
+  background-attachment: fixed;     
 }
+
+
+.about-us-column{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 
 .about-us {
   max-width: 80ch;
@@ -120,6 +142,7 @@ h1, h2, h3,h4,h5,h6{
   line-height: 1.8;
   position: relative; /* ← ADD THIS */
   z-index: 100;
+  padding: 2.4rem 0rem;
   
 }
 
